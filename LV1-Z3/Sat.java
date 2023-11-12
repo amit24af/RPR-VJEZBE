@@ -40,7 +40,7 @@ class Sat {
                 this.sljedeci();
             }
         } else{
-            for (int i=0; i<-pomak ; i++){
+            for (int i=0; i<pomak ; i++){
                 this.prethodni();
             }
         }
