@@ -10,7 +10,7 @@ public class MedunarodniBroj extends TelefonskiBroj{
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
+        if (o == null || this.getClass() != o.getClass()) return false;
         MedunarodniBroj that = (MedunarodniBroj) o;
         return Objects.equals(drzava, that.drzava) && Objects.equals(broj, that.broj);
     }
