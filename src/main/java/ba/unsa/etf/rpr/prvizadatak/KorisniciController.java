@@ -58,7 +58,7 @@ public class KorisniciController {
                 listViewId.setItems(lista);
             }else{
                 Alert upozorenje2=new Alert(Alert.AlertType.ERROR);
-                upozorenje2.setTitle("Unešeni podaci nisu validni.");
+                upozorenje2.setTitle("Uneseni podaci nisu validni.");
                 upozorenje2.setHeaderText("Korisnik "+korisnickoImeId.getText()+" vec postoji!");
                 upozorenje2.showAndWait();
             }
