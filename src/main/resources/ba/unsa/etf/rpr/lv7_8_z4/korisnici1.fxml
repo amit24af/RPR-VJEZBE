@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ButtonBar?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+
+<GridPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="225.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21"
+          xmlns:fx="http://javafx.com/fxml/1">
+  <stylesheets>
+    <URL value="@korisnici1.css" />
+  </stylesheets>
+  <columnConstraints>
+    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+  </columnConstraints>
+  <rowConstraints>
+    <RowConstraints maxHeight="-Infinity" minHeight="10.0" prefHeight="220.0" vgrow="SOMETIMES" />
+    <RowConstraints maxHeight="-Infinity" vgrow="SOMETIMES" />
+    <RowConstraints maxHeight="-Infinity" minHeight="10.0" prefHeight="80.0" vgrow="SOMETIMES" />
+  </rowConstraints>
+  <children>
+    <ListView fx:id="listViewId" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="190.0" prefWidth="300.0">
+      <GridPane.margin>
+        <Insets bottom="12.0" left="18.0" right="12.0" top="16.0" />
+      </GridPane.margin>
+      <padding>
+        <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+      </padding>
+    </ListView>
+    <HBox prefHeight="110.0" prefWidth="200.0" GridPane.columnIndex="1">
+      <children>
+        <VBox prefWidth="100.0">
+          <children>
+            <Label minWidth="-Infinity" prefWidth="93.0" text="Ime:">
+              <VBox.margin>
+                <Insets bottom="5.0" left="5.0" right="5.0" top="6.0" />
+              </VBox.margin>
+              <padding>
+                <Insets bottom="3.0" left="3.0" right="3.0" top="3.0" />
+              </padding>
+            </Label>
+            <Label layoutX="15.0" layoutY="15.0" minWidth="-Infinity" prefWidth="93.0" text="Prezime:">
+              <padding>
+                <Insets bottom="3.0" left="3.0" right="3.0" top="3.0" />
+              </padding>
+              <VBox.margin>
+                <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+              </VBox.margin>
+            </Label>
+            <Label layoutX="15.0" layoutY="48.0" minWidth="-Infinity" prefWidth="93.0" text="E-mail:">
+              <padding>
+                <Insets bottom="3.0" left="3.0" right="3.0" top="3.0" />
+              </padding>
+              <VBox.margin>
+                <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+              </VBox.margin>
+            </Label>
+            <Label layoutX="15.0" layoutY="15.0" minWidth="-Infinity" prefWidth="93.0" text="Korisničko ime:">
+              <padding>
+                <Insets bottom="3.0" left="3.0" right="3.0" top="3.0" />
+              </padding>
+              <VBox.margin>
+                <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+              </VBox.margin>
+            </Label>
+            <Label layoutX="15.0" layoutY="15.0" minWidth="-Infinity" prefWidth="93.0" text="Lozinka: ">
+              <padding>
+                <Insets bottom="3.0" left="3.0" right="3.0" top="3.0" />
+              </padding>
+              <VBox.margin>
+                <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+              </VBox.margin>
+            </Label>
+          </children>
+          <HBox.margin>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+          </HBox.margin>
+        </VBox>
+        <VBox>
+          <children>
+            <TextField fx:id="imeId">
+              <VBox.margin>
+                <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+              </VBox.margin>
+              <padding>
+                <Insets bottom="3.0" left="3.0" right="3.0" top="3.0" />
+              </padding>
+            </TextField>
+            <TextField fx:id="prezimeId" layoutX="15.0" layoutY="15.0">
+              <padding>
+                <Insets bottom="3.0" left="3.0" right="3.0" top="3.0" />
+              </padding>
+              <VBox.margin>
+                <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+              </VBox.margin>
+            </TextField>
+            <TextField fx:id="emailId" layoutX="10.0" layoutY="43.0">
+              <padding>
+                <Insets bottom="3.0" left="3.0" right="3.0" top="3.0" />
+              </padding>
+              <VBox.margin>
+                <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+              </VBox.margin>
+            </TextField>
+            <TextField fx:id="korisnickoImeId" layoutX="10.0" layoutY="66.0">
+              <padding>
+                <Insets bottom="3.0" left="3.0" right="3.0" top="3.0" />
+              </padding>
+              <VBox.margin>
+                <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+              </VBox.margin>
+            </TextField>
+            <PasswordField fx:id="lozinkaId">
+              <VBox.margin>
+                <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+              </VBox.margin>
+              <padding>
+                <Insets bottom="3.0" left="3.0" right="3.0" top="3.0" />
+              </padding>
+            </PasswordField>
+          </children>
+          <HBox.margin>
+            <Insets bottom="8.0" left="8.0" right="8.0" top="8.0" />
+          </HBox.margin>
+        </VBox>
+      </children>
+      <GridPane.margin>
+        <Insets bottom="8.0" left="8.0" right="8.0" top="11.0" />
+      </GridPane.margin>
+    </HBox>
+    <ButtonBar prefHeight="40.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
+      <buttons>
+        <Button fx:id="bttnDodaj" mnemonicParsing="false" onAction="#onBttnDodaj" text="Dodaj">
+          <padding>
+            <Insets bottom="3.0" left="3.0" right="3.0" top="3.0" />
+          </padding>
+        </Button>
+        <Button fx:id="bttnKraj" mnemonicParsing="false" onAction="#onBttnKraj" text="Kraj" />
+      </buttons>
+      <GridPane.margin>
+        <Insets bottom="10.0" left="9.0" right="9.0" top="9.0" />
+      </GridPane.margin>
+      <padding>
+        <Insets bottom="12.0" left="11.0" right="12.0" top="11.0" />
+      </padding>
+    </ButtonBar>
+  </children>
+</GridPane>
