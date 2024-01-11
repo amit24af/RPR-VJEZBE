@@ -23,9 +23,6 @@ public class GeografijaDAO {
 
         try{
             pregledGradovaUpit=conn.prepareStatement("SELECT * FROM grad ORDER BY broj_stanovnika DESC");
-            if(pregledGradovaUpit==null){
-                System.out.println("koncekcija null");
-            }
             pregledDrzavaUpit=conn.prepareStatement("SELECT * FROM drzava");
             dajDrzavuUpit=conn.prepareStatement("SELECT * FROM drzava where id=?");
         }catch(SQLException e){
