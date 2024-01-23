@@ -22,7 +22,7 @@ public class GeografijaDAO {
         }
 
         try{
-            pregledGradovaUpit=conn.prepareStatement("SELECT * FROM grad ORDER BY broj_stanovnika DESC");
+            pregledGradovaUpit=conn.prepareStatement("SELECT * FROM grad WHERE id=13");
             if(pregledGradovaUpit==null){
                 System.out.println("koncekcija null");
             }
@@ -47,21 +47,32 @@ public class GeografijaDAO {
         }
     }
     ArrayList<Grad> gradovi(){
+        System.out.println("u metodi!");
         ArrayList<Grad> listaGradova=new ArrayList<>();
         try{
+            if(pregledGradovaUpit!=null){
+                System.out.println("case 1!");
             ResultSet rs=pregledGradovaUpit.executeQuery();
+                if(rs.next()){
+                    System.out.println("Zaista prazno!");
+                }
             while(rs.next()){
+                System.out.println("nije prazno");
                 Grad g=new Grad(rs.getInt(1), rs.getString(2),
                         rs.getInt(3), null);
 
                 Drzava d=dajDrzavu(rs.getInt(4), g);
                 g.setDrzava(d);
                 listaGradova.add(g);
+            }}else{
+                System.out.println("case 1!");
+                System.out.println("Nema gradova!");
             }
         }catch(SQLException e){
             System.out.println(e.getMessage());
             return null;
-        } return listaGradova;
+        } System.out.println("ende!");
+        return listaGradova;
 
     }
     ArrayList<Drzava> drzave(){
