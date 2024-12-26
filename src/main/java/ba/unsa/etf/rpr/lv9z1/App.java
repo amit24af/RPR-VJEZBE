@@ -7,7 +7,10 @@ public class App {
         try {
             dao = GeografijaDAO.getInstance();
             ArrayList<Grad> gradovi = new ArrayList<>();
+            ArrayList<Drzava> drzave = new ArrayList<>();
+
             gradovi = dao.gradovi();
+            drzave = dao.drzave();
 
             for (Grad g : gradovi) {
                 System.out.println("- "+g.getNaziv() + ", " + g.getDrzava().getNaziv() + " " +
@@ -17,7 +20,5 @@ public class App {
             }catch(SQLException e){
                 System.out.println(e.getMessage());
             }
-
-
     }
 }
